@@ -4,5 +4,4 @@
 
 [submodule "vanilla-media"]
     path = vanilla-media
-    url = 
-https://git.solero.me/solero/vanilla-media.git
+    url = https://git.solero.me/solero/vanilla-media.git
