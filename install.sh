@@ -131,6 +131,8 @@ fi
 echo "Done setting up the environment."
 echo "Downloading Game Files"
 sudo rm -rf wand
+sudo rm -rf legacy-media
+sudo rm -rm vanilla-media
 git clone --recurse-submodules https://github.com/iiikrrish555/wand
 cd wand
 echo "Done Downloading the game files."
