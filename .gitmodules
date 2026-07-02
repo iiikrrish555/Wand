@@ -1,7 +1,7 @@
 [submodule "legacy-media"]
-    path = legacy-media
-    url = https://git.solero.me/solero/legacy-media.git
+	path = legacy-media
+	url = https://git.solero.me/solero/legacy-media
 
 [submodule "vanilla-media"]
-    path = vanilla-media
-    url = https://git.solero.me/solero/vanilla-media.git
+	path = vanilla-media
+	url = https://git.solero.me/solero/vanilla-media
