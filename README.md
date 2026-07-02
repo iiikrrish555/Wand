@@ -8,7 +8,7 @@ Wand makes it easy to configure dash, houdini and a media server utilizing docke
 ## Installation script
 **Step 1** run the script
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/solero/wand/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/iiikrrish555/wand/main/install.sh)
 ```
 **Step 2** Answer Questions which are:
 * Database password (Leave blank for random password)
