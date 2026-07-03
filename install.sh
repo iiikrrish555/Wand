@@ -131,7 +131,7 @@ fi
 echo "Done setting up the environment."
 echo "Downloading Game Files"
 sudo rm -rf wand
-git clone https://github.com/iiikrrish555/wand
+git clone --recurse-submodules https://github.com/iiikrrish555/Wand && cd wand
 cd wand
 echo "Done Downloading the game files."
 sudo rm -r .env
