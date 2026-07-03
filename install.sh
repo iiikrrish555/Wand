@@ -134,8 +134,11 @@ sudo rm -rf wand
 git clone --recurse-submodules --config submodule.vanilla-media.update=none https://github.com/iiikrrish555/wand
 cd wand
 sudo rm -rf vanilla-media
-git submodule update --init --force vanilla-media
-echo "Done Downloading the game files."
+sudo git clone https://git.solero.me/solero/vanilla-media.git
+sudo chmod +x wait-for-postgres.sh 2>/dev/null; sudo chmod +x houdini/wait-for-postgres.sh 2>/dev/null; sudo find . -name "wait-for-postgres.sh" -exec chmod +x {} \;; sudo docker-compose up -d --force-recreate
+sudo chmod -R 777 /home/ubuntu/wand; sudo docker-compose down && sudo docker-compose up -d
+sudo rm -rf redis-brand-new-data redis-fresh-pristine-data redis-new-data redis-data db-data 2>/dev/null
+echo "Done Downloading the game files and fixing code."
 sudo rm -r .env
 
 echo "# Database
