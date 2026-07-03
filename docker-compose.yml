@@ -14,12 +14,12 @@ services:
       - ./houdini/houdini.sql:/docker-entrypoint-initdb.d/houdini.sql
       - ./.data:/var/lib/postgresql/data
   redis:
-    image: redis:5.0.9-alpine
+    image: redis:7-alpine
     restart: always
     networks:
       - wand
     ports:
-      - 6379
+      - 6379:6379
   web:
     build: ./web
     restart: always
