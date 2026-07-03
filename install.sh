@@ -131,7 +131,7 @@ fi
 echo "Done setting up the environment."
 echo "Downloading Game Files"
 sudo rm -rf wand
-git clone --recurse-submodules --config submodule.vanilla-media.update=none https://github.com/iiikrrish555/wand
+sudo git clone --recurse-submodules --config submodule.vanilla-media.update=none https://github.com/iiikrrish555/wand
 cd wand
 sudo rm -rf vanilla-media
 sudo git clone https://git.solero.me/solero/vanilla-media.git
