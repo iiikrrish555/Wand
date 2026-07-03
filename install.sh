@@ -131,7 +131,10 @@ fi
 echo "Done setting up the environment."
 echo "Downloading Game Files"
 sudo rm -rf wand
-git clone --recurse-submodules --config core.protectNTFS=false --config core.protectHFS=false https://github.com/iiikrrish555/wand /home/ubuntu/wand && cd wand
+git clone --recurse-submodules --config submodule.vanilla-media.update=none https://github.com/iiikrrish555/wand
+cd wand
+sudo rm -rf vanilla-media
+git submodule update --init --force vanilla-media
 echo "Done Downloading the game files."
 sudo rm -r .env
 
