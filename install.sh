@@ -135,9 +135,10 @@ sudo git clone --recurse-submodules --config submodule.vanilla-media.update=none
 cd wand
 sudo rm -rf vanilla-media
 sudo git clone https://git.solero.me/solero/vanilla-media.git
-sudo chmod +x wait-for-postgres.sh 2>/dev/null; sudo chmod +x houdini/wait-for-postgres.sh 2>/dev/null; sudo find . -name "wait-for-postgres.sh" -exec chmod +x {} \;; sudo docker-compose up -d --force-recreate
-sudo chmod -R 777 /home/ubuntu/wand; sudo docker-compose down && sudo docker-compose up -d
+sudo docker-compose up -d; sleep 30; sudo docker-compose down --remove-orphans
 sudo rm -rf redis-brand-new-data redis-fresh-pristine-data redis-new-data redis-data db-data 2>/dev/null
+sudo chmod +x wait-for-postgres.sh 2>/dev/null; sudo chmod +x houdini/wait-for-postgres.sh 2>/dev/null; sudo find . -name "wait-for-postgres.sh" -exec chmod +x {} \;;
+sudo chmod -R 777 "$PWD"; sudo docker-compose down --remove-orphans 2>/dev/null; sudo docker-compose up -d --force-recreate;
 echo "Done Downloading the game files and fixing code."
 sudo rm -r .env
 
